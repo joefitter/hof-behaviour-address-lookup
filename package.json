@@ -1,0 +1,16 @@
+{
+  "name": "hof-behaviour-address-lookup",
+  "version": "1.0.0",
+  "description": "A HOF Behaviour for a multi-step postcode lookup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.6.3"
+  }
+}
