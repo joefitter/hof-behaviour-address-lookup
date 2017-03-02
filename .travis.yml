@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '4'
+  - '6'
+
+before_install:
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+
+env:
+  matrix:
+    secure: W04yoVu1NGeVdPsbaGzMEg4o9cZzY+8yupyYzaSQ2hR0VEWsGARP9IzqrzZBXIKjWYK+Hn7nwQm86Jwa2FTE0h++zeJvTcqDZPHwgc42tj0yZ34+D0UqAKgChkl8dZrW4BJDW2hvyB2gpcMDsNts6E/+XSU0OpiW1pMZHcCgNYZVVRUlaO7EUqfKMzf4qe15IfzWi4VcMhGRUb9bSN2CKnQdiIgVvq/Rft5kkETx8/VgciyE2GkUL/DH8ym72kvDjQFWgpluIZkyw+kFHe4FGdMiUiF0dpnUVoAX8wt3n173jW8hK9/r3qy6CfODNLuoXq2dURLzeyi3Qy9adAHJzj6kOZA41KJAh8cJISb0UN3GFUS1NcVkkrrDpUnjK+g4bZCVukCwKb55Zyf1f03UXSdyxuJm6zGoShViEU0sJ2C24Uw3K7kflTlmB7pTD3nDrdhWmBUzAYuRSv7vPyDnX7NRDec/7QEg92niFOWBCQvp9NAeKuV4/UjaD+9jq3BWMhKgPKvBTUQ70QkQdL+kLtdsfLF+FhvfQNGFCt7JVSbq6RVwItiJGWovZjvWfqIc7ajt5h5vRDDw1ZhPcK7nxf79QiYl3CPSIfA5NrwAojdfcbo/UqKnKfhNEcpSmyXR1+ilsazJhh/wi5yYNwzBd6DVxlSQD9W5nvfWzfEn11g=
