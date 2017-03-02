@@ -3,12 +3,35 @@
   "version": "1.0.0",
   "description": "A HOF Behaviour for a multi-step postcode lookup",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npm run test:lint && npm run test:functional",
+    "test:lint": "eslint .",
+    "test:functional": "funkie mocha ./functional-tests --opts ./functional-tests/mocha.opts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "hof-model": "^3.0.0",
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.16.1",
+    "cookie-parser": "^1.4.3",
+    "eslint": "^3.16.1",
+    "eslint-config-homeoffice": "^2.1.2",
+    "express": "^4.14.1",
+    "express-partial-templates": "^0.2.0",
+    "express-session": "^1.15.1",
+    "funkie": "0.0.5",
+    "funkie-phantom": "0.0.1",
+    "hof-form-wizard": "^3.2.0",
+    "hof-govuk-template": "^1.0.0",
+    "hof-template-mixins": "^3.4.0",
+    "hof-template-partials": "^3.3.1",
+    "hof-util-autofill": "^1.0.2",
+    "hogan-express-strict": "^0.5.4",
+    "mocha": "^3.2.0",
+    "webdriverio": "^4.6.2"
   }
 }
