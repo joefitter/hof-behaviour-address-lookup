@@ -24,7 +24,7 @@
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.15.1",
     "funkie": "0.0.5",
-    "funkie-phantom": "joefitter/funkie-phantom",
+    "funkie-phantom": "joefitter/funkie-phantom#test",
     "hof-form-wizard": "^3.2.0",
     "hof-govuk-template": "^1.0.0",
     "hof-template-mixins": "^3.4.0",
