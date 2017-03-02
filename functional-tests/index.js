@@ -25,6 +25,23 @@ describe('tests', () => {
 
   afterEach(() => browser.end());
 
+  it('test 1', () =>
+    browser.url('/one')
+      .getUrl()
+      .then(url => {
+        assert.ok(url.includes('/one'));
+      })
+  );
+
+  it('test 1', () =>
+    browser.url('/one?step=lookup')
+      .getUrl()
+      .then(url => {
+        console.log(url);
+        assert.ok(url.includes('step=lookup'));
+      })
+  );
+
   it('redirects to the address substep on a failed lookup', () =>
     browser.url('/one')
       .$('input')
