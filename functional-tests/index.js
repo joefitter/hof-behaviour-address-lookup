@@ -10,7 +10,7 @@ describe('tests', () => {
   let port;
 
   before(() => {
-    app = App(require('./apps/default')).listen();
+    app = App(require('./apps/default')).listen(3000);
     port = app.address().port;
   });
 
@@ -19,11 +19,27 @@ describe('tests', () => {
   });
 
   beforeEach(() => {
-    browser = Browser().url(`http://localhost:${port}`);
+    browser = Browser().url('http://localhost:3000');
     return browser;
   });
 
   afterEach(() => browser.end());
+
+  it('', (done) => {
+    var http = require('http');
+    var url = require('url');
+
+    var opts = url.parse(`http://localhost:${port}`);
+    opts.headers = {};
+    opts.headers['Content-Type'] = 'text/html';
+
+    http.request(opts, function(res) {
+      // do whatever you want with the response
+      console.log(res.headers);
+      res.pipe(process.stdout);
+      done();
+    });
+  });
 
   it('redirects to the address substep on a failed lookup', () =>
     browser.url('/one')
